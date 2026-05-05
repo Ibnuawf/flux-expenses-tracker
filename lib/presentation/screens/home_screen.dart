@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../../../../core/config/app_dimens.dart';
+import '../../domain/entities/expense.dart';
 import '../controllers/expense_controller.dart';
 import '../state/expense_state.dart';
 import '../widgets/expense_form_sheet.dart';
@@ -105,7 +106,7 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
-  void _showSheet(BuildContext context, dynamic expense) { // expense typed dynamically to reuse method
+  void _showSheet(BuildContext context, Expense? expense) {
     showModalBottomSheet(
       context: context,
       isScrollControlled: true,
